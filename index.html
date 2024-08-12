@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="box">
+        Check the entered number is Armstrong Number or not:--
+    </div>
+    <script>
+        var n,x,s=0,r,c;
+        n=Number(prompt("Enter a num:"));
+        document.write("The number is:",n,"<br>");
+        x=n;
+        while(n!=0){
+            n=Math.floor(n/10);
+            c++;
+        }
+        n=x;
+        while(n!=0){
+            r=n%10;
+            n=Math.floor(n/10);
+            let p=Math.pow(r,3);
+            s=s+p;
+        }
+        if(x==s){
+            document.write(`The number ${x} is armstrong number.`);
+        }
+        else{
+            document.write(`The number ${x} is not a armstrong number.`);
+        }
+
+    </script>
+</body>
+</html>
